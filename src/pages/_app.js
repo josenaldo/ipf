@@ -1,13 +1,9 @@
 import Head from "next/head";
-import {DefaultTemplate} from "common/templates";
-// import {AppConfig} from 'config';
+import {DefaultTemplate} from "@/common/templates";
+import {AppConfig} from '@/config';
 
+function App({ Component, pageProps }) {
 
-// import "../styles/globals.css";
-
-function MyApp({ Component, pageProps }) {
-
-    // console.log(AppConfig);
 
     return (
         <>
@@ -16,8 +12,7 @@ function MyApp({ Component, pageProps }) {
                     name="viewport"
                     content="initial-scale=1, width=device-width"
                 />
-                {/* <title>{AppConfig.name} - Chat</title> */}
-
+                <title>{AppConfig.name} - Chat</title>
             </Head>
 
             <DefaultTemplate>
@@ -27,4 +22,4 @@ function MyApp({ Component, pageProps }) {
     );
 }
 
-export default MyApp;
+export default App;
